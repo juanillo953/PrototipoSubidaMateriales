@@ -45,33 +45,4 @@ if (isset($_POST["import"])) {
         }
     }
 }
-/*$nombreCsv = $_FILES['file']['name'];
-if (empty($nombreCsv)) {
-
-}else{
-    $target_dir  = "csvs/Prueba_";
-    $target_file = $target_dir . basename($_FILES["file"]["name"]);
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-    } else {
-    }
-
-    $file = fopen($target_file, "r");
-    while (($column = fgetcsv($file, 10000, ";")) !== FALSE) {
-        $sqlInsert = "INSERT into users (Material_ID,Material_Nombre,Material_Precio,Material_Peso,Material_Dimensiones_alto,Material_Dimensiones_ancho,Material_Dimensiones_profundo,Material_Proveedor_ID,Material_Descripcion)
-               values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','" . $column[3] . "','" . $column[4] . "','" . $column[5] . "','" . $column[6] . "','" . $column[7] . "','" . $column[8] . "')";
-        $result = mysqli_query($conn, $sqlInsert);
-        
-        if (! empty($result)) {
-            $type = "success";
-            $message = "CSV Data Imported into the Database";
-            echo "acierto";
-
-            header("Location:acierto.php");
-        } else {
-            $type = "error";
-            $message = "Problem in Importing CSV Data";
-            echo "fallo";
-            header("Location:fallo.php");
-        }
-}*/
 ?>
